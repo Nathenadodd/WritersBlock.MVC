@@ -1,0 +1,16 @@
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\WritersBlock.Services.dll.config
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\WritersBlock.Services.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\WritersBlock.Services.pdb
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\EntityFramework.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\EntityFramework.xml
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\obj\Debug\WritersBlock.Services.csprojAssemblyReference.cache
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\obj\Debug\WritersBlock.Services.csproj.CoreCompileInputs.cache
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\obj\Debug\WritersBlock.Services.csproj.CopyComplete
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\obj\Debug\WritersBlock.Services.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Services\obj\Debug\WritersBlock.Services.pdb
