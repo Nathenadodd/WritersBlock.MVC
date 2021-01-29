@@ -32,6 +32,8 @@ namespace WritersBlock.Data
             return new ApplicationDbContext();
         }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<Faves> Faves { get; set; }
+        public DbSet<Comments> Comment { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritersBlockMVC", "WritersBlockMVC\WritersBlockMVC.csproj", "{FE3D74EC-94AC-4096-BF23-C590CFD30DFD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritersBlockWebMVC", "WritersBlockMVC\WritersBlockWebMVC.csproj", "{FE3D74EC-94AC-4096-BF23-C590CFD30DFD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WritersBlock.Data", "WritersBlock.Data\WritersBlock.Data.csproj", "{CE73CBA4-D633-4A67-86F5-9768628CC4D0}"
 EndProject

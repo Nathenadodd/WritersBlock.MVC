@@ -54,13 +54,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comments.cs" />
+    <Compile Include="Faves.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Note.cs" />
+    <Compile Include="Migrations\202101272302370_Fix Comments.cs" />
+    <Compile Include="Migrations\202101272302370_Fix Comments.Designer.cs">
+      <DependentUpon>202101272302370_Fix Comments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101281818317_Comment.cs" />
+    <Compile Include="Migrations\202101281818317_Comment.Designer.cs">
+      <DependentUpon>202101281818317_Comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101272302370_Fix Comments.resx">
+      <DependentUpon>202101272302370_Fix Comments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101281818317_Comment.resx">
+      <DependentUpon>202101281818317_Comment.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

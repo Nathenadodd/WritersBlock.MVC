@@ -1,12 +1,49 @@
-﻿body {
+﻿/*font-family: 'Hachi Maru Pop', cursive;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Titillium Web', sans-serif;*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #050908;
     padding-top: 50px;
     padding-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: dodgerblue;
+        /*#1D291C;*/
 }
+
+html {
+    font-family: sans-serif;
+    
+}
+.navbar {
+    background-color: #2e050b;
+}
+nav{
+    color: black;
+}
+.jumbotron{
+    color: inherit;
+    font-size: 75px;
+    font-family: Hachi Maru Pop, cursive;
+    color: whitesmoke;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    border-radius: 0%;
+}
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 15px;    
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +58,20 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+.btn {
+    font-size: 24px;
+    border-radius: 50%; 
+    background-color:#2e050b;
+}
+img {
+ max-width: 100%;
+ height: auto;
+}
+
+footer {
+    color: #050908;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
