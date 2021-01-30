@@ -10,8 +10,8 @@ namespace WritersBlock.Models
    {
         public int FaveID { get; set; }
         public int PostID { get; set; }
-        //public int CommentID { get; set; }
-        //public string UserID { get; set; }
+        public int CommentID { get; set; }
+        public string UserID { get; set; }
         public DateTimeOffset CreatedUTC { get; set; }
 
    }

@@ -1,0 +1,16 @@
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\WritersBlock.Models.dll.config
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\WritersBlock.Models.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\WritersBlock.Models.pdb
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\EntityFramework.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\EntityFramework.SqlServer.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\EntityFramework.xml
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\EntityFramework.SqlServer.xml
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\obj\Release\WritersBlock.Models.csprojAssemblyReference.cache
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\obj\Release\WritersBlock.Models.csproj.CoreCompileInputs.cache
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\obj\Release\WritersBlock.Models.csproj.CopyComplete
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\obj\Release\WritersBlock.Models.dll
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Models\obj\Release\WritersBlock.Models.pdb

@@ -17,9 +17,10 @@ namespace WritersBlock.Data
         public int PostID { get; set; }
         [ForeignKey(nameof(PostID))]
         public virtual Post Post { get; set; }
+        public int CommentID { get; set; }
 
         //[ForeignKey(nameof(ApplicationUser))]
-        //public string UserID { get; set; }
+        public string UserID { get; set; }
         public DateTimeOffset CreatedUTC { get; set; }
         public DateTimeOffset ModifiedUTC { get; set; }
     }

@@ -91,17 +91,17 @@ namespace WritersBlockMVC.Controllers
                 return View(model);
             }
             var svc = CreateCommentService();
-            var detail = svc.GetCommentById(id);
-            model = new CommentEdit
-            {
-                CommentText = detail.CommentText
-            };
-
+            //var detail = svc.GetCommentById(id);
+            //model = new CommentEdit
+            //{
+            //    CommentText = detail.CommentText
+            //};
 
             if (svc.UpdateComment(model, id))
             {
                 ViewBag.SaveEdit = "Comment was updated.";
             }
+            //return View(model);
             return RedirectToAction(nameof(Index));
         }
         [ActionName("Delete")]

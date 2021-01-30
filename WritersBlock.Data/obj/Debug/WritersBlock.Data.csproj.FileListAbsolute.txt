@@ -14,6 +14,5 @@ C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Data\obj\Debug
 C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Data\obj\Debug\WritersBlock.Data.dll
 C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Data\obj\Debug\WritersBlock.Data.pdb
 C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Data\obj\Debug\WritersBlock.Data.csprojAssemblyReference.cache
-C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Data\obj\Debug\WritersBlock.Data.Migrations.FixComments.resources
+C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Data\obj\Debug\WritersBlock.Data.Migrations.Deploy.resources
 C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Data\obj\Debug\WritersBlock.Data.csproj.GenerateResource.cache
-C:\Eleven Fifty Projects\DotNetprojects\WritersBlock\WritersBlock.Data\obj\Debug\WritersBlock.Data.Migrations.Comment.resources

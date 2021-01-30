@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using WritersBlock.Data;
 using WritersBlock.Models;
 
@@ -22,7 +23,8 @@ namespace WritersBlock.Services
                 new Faves()
                 {   OwnerId = _userId,                 
                     FaveID = model.FaveID,
-                    //PostID = model.PostID,                    
+                    PostID = model.PostID,  
+                    CommentID = model.CommentID,
                     CreatedUTC = DateTimeOffset.Now
                 };
 
@@ -30,6 +32,23 @@ namespace WritersBlock.Services
             {
                 ctx.Faves.Add(entity);
                 return ctx.SaveChanges() == 1;
+            }
+        }
+        //Helper method for Post
+        public IEnumerable<SelectListItem> CreatePostSelectList()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Posts.Select(
+                                  e =>
+                                    new SelectListItem
+                                    {
+                                        Text = e.PostText,
+                                        Value = e.PostID.ToString(),
+                                    });
+                return query.ToArray();
             }
         }
         public IEnumerable<FaveListItem> GetFaves()
@@ -44,13 +63,31 @@ namespace WritersBlock.Services
                              e =>
                                  new FaveListItem
                                  {
-                                     //UserID = e.UserID,
+                                     UserID = e.UserID,
                                      FaveID = e.FaveID,
                                      PostID = e.PostID,
+                                     CommentID = e.CommentID,
                                      CreatedUTC = e.CreatedUTC
                                  }
 
                          );
+                return query.ToArray();
+            }
+        }
+        public IEnumerable<SelectListItem> CreateCommentSelectList()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Comment.Select(
+                                    e =>
+                                        new SelectListItem
+                                        {
+                                            Text = e.CommentText,
+                                            Value = e.CommentID.ToString(),
+                                        }
+                                        );
                 return query.ToArray();
             }
         }
@@ -67,7 +104,8 @@ namespace WritersBlock.Services
                     {
                         FaveID = entity.FaveID,
                         PostID = entity.PostID,                       
-                        //UserID = entity.UserID,
+                        UserID = entity.UserID,
+                        CommentID = entity.CommentID,
                         CreatedUTC = entity.CreatedUTC,
                         ModifiedUTC = entity.ModifiedUTC
                     };
@@ -83,7 +121,8 @@ namespace WritersBlock.Services
                         .Single(e => e.FaveID == model.FaveID && e.OwnerId == _userId);
                 entity.FaveID = model.FaveID;
                 entity.PostID = model.PostID;                
-                //entity.UserID = model.UserID;
+                entity.UserID = model.UserID;
+                entity.CommentID = model.CommentID;
                 entity.CreatedUTC = DateTimeOffset.UtcNow;
                 entity.ModifiedUTC = DateTimeOffset.UtcNow;
                 return ctx.SaveChanges() == 1;

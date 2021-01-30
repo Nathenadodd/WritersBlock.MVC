@@ -14,30 +14,49 @@ namespace WritersBlockMVC.Controllers
         // GET: Faves
         public ActionResult Index()
         {
-            //var userId = User.Identity.GetUserId();
-            var service = CreateFavesService();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            FavesService service = new FavesService(userId);
             var model = service.GetFaves();
+            
 
             return View(model);
         }
         public ActionResult Create()
         {
+            var service = CreateFavesService();
+            var PostsList = service.CreatePostSelectList();
+            ViewBag.PostsList = new SelectList(PostsList, "Value", "Text");
+            var CommentsList = service.CreateCommentSelectList();
+            ViewBag.CommentsList = new SelectList(CommentsList, "Value", "Text");
             return View();
         }
+        //Post
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(FaveCreate model)
         {
+            var service = CreateFavesService();
+            var PostsList = service.CreatePostSelectList();
+            ViewBag.PostsList = new SelectList(PostsList, "Value", "Text");
+            var CommentsList = service.CreateCommentSelectList();
+            ViewBag.CommentsList = new SelectList(CommentsList, "Value", "Text");
+
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            var service = CreateFavesService();
+            //var service = CreateFavesService();
 
-            service.CreateFave(model);
+           if (service.CreateFave(model))
+           {
+                ViewBag.SaveResult = "Your fave  was created";
+                return RedirectToAction("Index");
+           };
+            ModelState.AddModelError("", "Fave could not be created");
 
-            return RedirectToAction("Index");
+            return View(model);
+            
         }
         public ActionResult Details(int id)
         {
@@ -46,17 +65,22 @@ namespace WritersBlockMVC.Controllers
 
             return View(model);
         }
+        
         public ActionResult Edit(int id)
         {
             var service = CreateFavesService();
             var detail = service.GetFavesById(id);
+            var PostsList = service.CreatePostSelectList();
+            ViewBag.PostsList = new SelectList(PostsList, "Value", "Text");
+            var CommentsList = service.CreateCommentSelectList();
+            ViewBag.CommentsList = new SelectList(CommentsList, "Value", "Text");
             var model =
                 new FavesEdit
                 {
                     FaveID = detail.FaveID,
                     PostID = detail.PostID,
-                    //CommentID = detail.CommentID,
-                    //UserID = detail.UserID
+                    CommentID = detail.CommentID,
+                    UserID = detail.UserID
                 };
             return View(model);
         }
@@ -64,25 +88,37 @@ namespace WritersBlockMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, FavesEdit model)
         {
-            if (!ModelState.IsValid) return View(model);
-
+            var service = CreateFavesService();
+            var PostsList = service.CreatePostSelectList();
+            ViewBag.PostsList = new SelectList(PostsList, "Value", "Text");
+            var CommentsList = service.CreateCommentSelectList();
+            ViewBag.CommentsList = new SelectList(CommentsList, "Value", "Text");
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
             if (model.FaveID != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
             }
-            var service = CreateFavesService();
+            //var svc = CreateFavesService();
+            //var detail = svc.GetFavesById(id);
+            //model = new FavesEdit
+            //{
+            //    FaveID = detail.FaveID
+            //};
 
             if (service.UpdateFaves(model))
             {
-                TempData["SaveResult"] = "Your note was updated.";
-                return RedirectToAction("Index");
+                ViewBag.SaveEdit = "Fave was updated.";
             }
-
-            ModelState.AddModelError("", "Your note could not be updated.");
-            return View(model);
-
+            return RedirectToAction(nameof(Index));
         }
+            //ModelState.AddModelError("", "Your note could not be updated.");
+            //return View(model);
+
+        
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
@@ -94,13 +130,13 @@ namespace WritersBlockMVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeletePost(int id)
+        public ActionResult DeleteFave(int id)
         {
             var service = CreateFavesService();
 
             service.DeleteFave(id);
 
-            TempData["SaveResult"] = "Your note was deleted";
+            TempData["SaveResult"] = "Your Fave was deleted";
 
             return RedirectToAction("Index");
         }
@@ -109,7 +145,6 @@ namespace WritersBlockMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new FavesService(userId);
-
             return service;
         }
     }
